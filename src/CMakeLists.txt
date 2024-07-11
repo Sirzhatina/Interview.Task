@@ -5,6 +5,7 @@ set(SOURCES
     App.hpp
     MainWindow.hpp
     DrawingArea.hpp
+    ToolBar.hpp
 )
 
 add_executable(${TARGET})
