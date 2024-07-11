@@ -3,7 +3,7 @@
 #include <QApplication>
 #include "MainWindow.hpp"
 
-class App : public QApplication {
+class App final : public QApplication {
     Q_OBJECT
 public:
     App(int argc, char* argv[]): QApplication{argc, argv} { 
