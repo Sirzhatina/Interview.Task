@@ -15,3 +15,5 @@ target_sources(${TARGET}
 )
 
 target_link_libraries(${TARGET} PRIVATE qt::qt)
+
+set_target_properties(${TARGET} PROPERTIES AUTOMOC ON)
