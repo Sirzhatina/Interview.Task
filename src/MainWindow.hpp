@@ -3,12 +3,16 @@
 #include <QMainWindow>
 #include <QWidget>
 
+#include "DrawingArea.hpp"
+
 class MainWindow : public QMainWindow {
     Q_OBJECT
 public:
-    MainWindow(): m_optionsBar{this}, m_paintingArea{this} {}
+    MainWindow(): m_optionsBar{this}, m_drawingArea{this} {
+        m_drawingArea.show();
+    }
 
 private:
     QWidget m_optionsBar;
-    QWidget m_paintingArea;
+    DrawingArea m_drawingArea;
 };

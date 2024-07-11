@@ -4,6 +4,7 @@ set(SOURCES
     main.cpp
     App.hpp
     MainWindow.hpp
+    DrawingArea.hpp
 )
 
 add_executable(${TARGET})
