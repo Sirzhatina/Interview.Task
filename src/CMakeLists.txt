@@ -2,6 +2,7 @@ set(TARGET app)
 
 set(SOURCES
     main.cpp
+    App.hpp
     MainWindow.hpp
 )
 
