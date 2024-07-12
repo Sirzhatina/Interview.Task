@@ -8,19 +8,19 @@ class ToolBar : public QToolBar {
 public:
 	ToolBar(QWidget* parent)
 		: QToolBar{parent}
-		, m_triangleButton{ new QPushButton{"Triangle"} }
-		, m_rectangleButton{ new QPushButton{"Rectangle"} }
-		, m_ellipseButton{ new QPushButton{"Ellipse"} } {
+		, m_triangle{ new QPushButton{"Triangle"} }
+		, m_rectangle{ new QPushButton{"Rectangle"} }
+		, m_ellipse{ new QPushButton{"Ellipse"} } {
 
 		this->setMovable(false);
 
-		this->addWidget(m_triangleButton);
-		this->addWidget(m_rectangleButton);
-		this->addWidget(m_ellipseButton);
+		this->addWidget(m_triangle);
+		this->addWidget(m_rectangle);
+		this->addWidget(m_ellipse);
 	}
 
 private:
-	QPushButton* m_triangleButton;
-	QPushButton* m_rectangleButton;
-	QPushButton* m_ellipseButton;
+	QPushButton* m_triangle;
+	QPushButton* m_rectangle;
+	QPushButton* m_ellipse;
 };
