@@ -6,6 +6,11 @@ set(SOURCES
     MainWindow.hpp
     DrawingArea.hpp
     ToolBar.hpp
+    AbstractShapeButton.hpp
+    AbstractShapeButton.cpp
+    TriangleButton.hpp
+    RectangleButton.hpp
+    EllipseButton.hpp
 )
 
 add_executable(${TARGET})
