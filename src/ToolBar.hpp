@@ -17,6 +17,10 @@ public:
 		this->addWidget(m_triangle);
 		this->addWidget(m_rectangle);
 		this->addWidget(m_ellipse);
+
+		m_triangle->setCheckable(true);
+		m_rectangle->setCheckable(true);
+		m_ellipse->setCheckable(true);
 	}
 
 private:
