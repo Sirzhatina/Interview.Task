@@ -3,7 +3,8 @@
 #include "AbstractShapeButton.hpp"
 
 
-class RectangleButton : AbstractShapeButton {
+class RectangleButton : public  AbstractShapeButton {
 public:
+	RectangleButton(const QString& text, QToolBar* parent) : AbstractShapeButton{ text, parent } { }
 	void draw() override { }
 };

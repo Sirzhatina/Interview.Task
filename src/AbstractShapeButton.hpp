@@ -7,7 +7,7 @@ class QToolBar;
 class AbstractShapeButton : public QPushButton {
 	Q_OBJECT
 public:
-	AbstractShapeButton(QToolBar* parent);
+	AbstractShapeButton(const QString& text, QToolBar* parent);
 	~AbstractShapeButton() = default;
 
 	virtual void draw() = 0;

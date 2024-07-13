@@ -1,30 +1,29 @@
 #pragma once
 
+#include <array>
 #include <QToolBar>
-#include <QPushButton>
-#include <QHBoxLayout>
+#include "AbstractShapeButton.hpp"
+#include "EllipseButton.hpp"
+#include "RectangleButton.hpp"
+#include "TriangleButton.hpp"
 
 class ToolBar : public QToolBar {
 public:
 	ToolBar(QWidget* parent)
-		: QToolBar{parent}
-		, m_triangle{ new QPushButton{"Triangle"} }
-		, m_rectangle{ new QPushButton{"Rectangle"} }
-		, m_ellipse{ new QPushButton{"Ellipse"} } {
+		: QToolBar{parent} {
 
 		this->setMovable(false);
 
-		this->addWidget(m_triangle);
-		this->addWidget(m_rectangle);
-		this->addWidget(m_ellipse);
-
-		m_triangle->setCheckable(true);
-		m_rectangle->setCheckable(true);
-		m_ellipse->setCheckable(true);
+		for (const auto& b : m_shapeButtons) {
+			this->addWidget(b);
+			b->setCheckable(true);
+		}
 	}
 
 private:
-	QPushButton* m_triangle;
-	QPushButton* m_rectangle;
-	QPushButton* m_ellipse;
+	std::array<AbstractShapeButton*, 3> m_shapeButtons{
+		new TriangleButton { "Triangle" , this },
+		new RectangleButton{ "Rectangle", this },
+		new EllipseButton  { "Ellipse"  , this }
+	};
 };

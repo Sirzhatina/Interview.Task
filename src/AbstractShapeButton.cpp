@@ -1,4 +1,6 @@
 #include "AbstractShapeButton.hpp"
 #include <QToolBar>
 
-AbstractShapeButton::AbstractShapeButton(QToolBar* parent): QPushButton{parent} {}
+AbstractShapeButton::AbstractShapeButton(const QString& text, QToolBar* parent): QPushButton{text, parent} {
+	this->setCheckable(true);
+}
