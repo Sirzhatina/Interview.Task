@@ -2,12 +2,14 @@
 
 #include <array>
 #include <QToolBar>
+#include <QButtonGroup>
 #include "AbstractShapeButton.hpp"
 #include "EllipseButton.hpp"
 #include "RectangleButton.hpp"
 #include "TriangleButton.hpp"
 
 class ToolBar : public QToolBar {
+	Q_OBJECT
 public:
 	ToolBar(QWidget* parent)
 		: QToolBar{parent} {
@@ -16,8 +18,10 @@ public:
 
 		for (const auto& b : m_shapeButtons) {
 			this->addWidget(b);
-			b->setCheckable(true);
+			m_shapeButtonsGroup->addButton(b);
 		}
+
+		this->addSeparator();
 	}
 
 private:
@@ -26,4 +30,6 @@ private:
 		new RectangleButton{ "Rectangle", this },
 		new EllipseButton  { "Ellipse"  , this }
 	};
+
+	QButtonGroup* m_shapeButtonsGroup{ new QButtonGroup{ this } };
 };
