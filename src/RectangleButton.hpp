@@ -6,5 +6,7 @@
 class RectangleButton : public  AbstractShapeButton {
 public:
 	RectangleButton(const QString& text, QToolBar* parent) : AbstractShapeButton{ text, parent } { }
-	void draw() override { }
+	void draw() override {
+		AbstractShapeButton::notImplemented();
+	}
 };
