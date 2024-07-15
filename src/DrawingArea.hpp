@@ -1,10 +1,11 @@
 #pragma once
 
 #include <QWidget>
+#include "MainWindow.hpp"
 
 class DrawingArea : public QWidget {
 public:
-	DrawingArea(QWidget* parent) : QWidget(parent) {
+	DrawingArea(MainWindow* parent) : QWidget{parent} {
 
 	}
 };
