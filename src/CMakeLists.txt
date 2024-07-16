@@ -3,9 +3,12 @@ set(TARGET app)
 set(SOURCES
     main.cpp
     App.hpp
+    App.cpp
     MainWindow.hpp
+    DrawingArea.cpp
     DrawingArea.hpp
     ToolBar.hpp
+    ToolBar.cpp
     AbstractShapeButton.hpp
     AbstractShapeButton.cpp
     TriangleButton.hpp
