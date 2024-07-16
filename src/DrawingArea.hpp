@@ -1,9 +1,9 @@
 #pragma once
 
 #include <QWidget>
-#include <QMouseEvent>
 
 class MainWindow;
+class QMouseEvent;
 
 class DrawingArea : public QWidget {
 public:

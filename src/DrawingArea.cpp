@@ -1,6 +1,6 @@
 #include "DrawingArea.hpp"
 #include "MainWindow.hpp"
-
+#include <QMouseEvent>
 
 DrawingArea::DrawingArea(MainWindow* parent) : QWidget{ parent } { }
 

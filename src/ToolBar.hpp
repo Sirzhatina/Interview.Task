@@ -3,10 +3,10 @@
 #include <array>
 #include <QToolBar>
 #include <QButtonGroup>
-#include "AbstractShapeButton.hpp"
-#include "EllipseButton.hpp"
-#include "RectangleButton.hpp"
-#include "TriangleButton.hpp"
+#include "ShapeButtons/AbstractShapeButton.hpp"
+#include "ShapeButtons/EllipseButton.hpp"
+#include "ShapeButtons/RectangleButton.hpp"
+#include "ShapeButtons/TriangleButton.hpp"
 
 class MainWindow;
 
