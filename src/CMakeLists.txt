@@ -1,13 +1,9 @@
 set(TARGET app)
 
 
-set(SHAPE_BUTTONS
-    ShapeButtons/AbstractShapeButton.cpp
-    ShapeButtons/AbstractShapeButton.hpp
-    ShapeButtons/EllipseButton.hpp
-    ShapeButtons/RectangleBUtton.hpp
-    ShapeButtons/TriangleButton.hpp
-)
+file(GLOB SHAPE_BUTTONS ShapeButtons/*)
+
+file(GLOB SHAPES Shapes/*)
 
 set(SOURCES
     main.cpp
@@ -19,6 +15,7 @@ set(SOURCES
     ToolBar.hpp
     ToolBar.cpp
     ${SHAPE_BUTTONS}
+    ${SHAPES}
 )
 
 add_executable(${TARGET})
