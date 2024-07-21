@@ -1,5 +1,5 @@
 #include "AbstractShape.hpp"
-
+#include <QPainter>
 
 AbstractShape::DrawResult AbstractShape::draw(QPainter* p) {
 	if (p == nullptr) {

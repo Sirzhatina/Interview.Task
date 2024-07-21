@@ -1,8 +1,8 @@
 #pragma once
 
-#include <QPainter>
 #include <expected>
 
+class QPainter;
 
 class AbstractShape {
 public:
