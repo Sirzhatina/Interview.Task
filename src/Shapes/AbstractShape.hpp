@@ -1,8 +1,14 @@
 #pragma once
 
 #include <expected>
+#include <QPoint>
 
 class QPainter;
+
+struct TangentialRectangle {
+	QPoint m_topLeft;
+	QPoint m_bottomRight;
+};
 
 class AbstractShape {
 public:
@@ -16,4 +22,7 @@ public:
 
 public:
 	virtual DrawResult draw(QPainter* p) = 0;
+
+protected:
+	TangentialRectangle m_rect;
 };
