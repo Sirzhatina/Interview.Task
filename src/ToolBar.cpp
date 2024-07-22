@@ -13,3 +13,7 @@ ToolBar::ToolBar(MainWindow* parent)
 
 	this->addSeparator();
 }
+
+AbstractShapeButton* ToolBar::checkedButton() const {
+	return dynamic_cast<AbstractShapeButton*>(m_shapeButtonsGroup->checkedButton());
+}

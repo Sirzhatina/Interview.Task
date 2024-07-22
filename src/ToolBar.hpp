@@ -15,6 +15,8 @@ class ToolBar : public QToolBar {
 public:
 	ToolBar(MainWindow* parent);
 
+	AbstractShapeButton* checkedButton() const;
+
 private:
 	std::array<AbstractShapeButton*, 3> m_shapeButtons{
 		new TriangleButton { "Triangle" , this },
