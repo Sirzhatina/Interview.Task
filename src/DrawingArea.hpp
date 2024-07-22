@@ -17,5 +17,7 @@ protected:
 
 private:
 
+	bool m_leftMouseButtonPushed{ false };
+
 	QPointF m_mouseLastPressedPosition;
 };
